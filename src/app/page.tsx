@@ -10,7 +10,9 @@ function minimizeCode(code: string) {
     } else {
       return match;
     }
-  });
+  })
+  .replace(/"/g, '\\"')
+  .replace(/'/g, "\\'");
 }
 
 function copyToClipboard(text: string) {
